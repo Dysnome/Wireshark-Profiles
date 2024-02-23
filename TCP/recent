@@ -51,7 +51,7 @@ gui.seconds_format: SECONDS
 
 # Zoom level.
 # A decimal number.
-gui.zoom_level: 4
+gui.zoom_level: 5
 
 # Bytes view display type.
 # One of: HEX, BITS
@@ -63,25 +63,31 @@ gui.bytes_encoding: FROM_PACKET
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 919
+gui.geometry_main_upper_pane: 501
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 938
+gui.geometry_main_lower_pane: 1717
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
         %m, -1,
-        %Yut, 270,
-        %s, -1,
-        "%Cus:tcp.srcport", 121,
-        %d, 189,
-        %p, 121,
+        %Yut, 61,
+        %s, 209,
+        "%Cus:tcp.srcport", 95,
+        %d, 152,
+        "%Cus:tcp.dstport", 139,
+        %p, 76,
         %L, 61,
-        "%Cus:ip.ttl", 137,
-        "%Cus:data.data", 143,
+        "%Cus:ip.ttl", 97,
+        "%Cus:data.data", 61,
         "%Cus:rtcp.ssrc.dlsr", 281,
+        "%Cus:tcp.checksum", 110,
+        "%Cus:tcp.payload", 624,
+        "%Cus:tcp.checksum", 110,
+        "%Cus:tcp.seq_raw", 176,
+        "%Cus:ip.id", 135,
         %i, 1231
 
 # Open conversation dialog tabs.

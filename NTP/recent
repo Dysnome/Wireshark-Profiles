@@ -105,9 +105,6 @@ gui.endpoint_tabs:
 # TRUE or FALSE (case-insensitive).
 gui.rlc_pdus_from_mac_frames: FALSE
 
-# Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /CTF/discord_challs/2/
-
 # Additional Toolbars shown
 # List of additional toolbars to show.
 gui.additional_toolbar_show: 

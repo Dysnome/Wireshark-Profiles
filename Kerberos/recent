@@ -51,7 +51,7 @@ gui.seconds_format: SECONDS
 
 # Zoom level.
 # A decimal number.
-gui.zoom_level: 0
+gui.zoom_level: 2
 
 # Bytes view display type.
 # One of: HEX, BITS
@@ -63,16 +63,16 @@ gui.bytes_encoding: FROM_PACKET
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 278
+gui.geometry_main_upper_pane: 1108
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 984
+gui.geometry_main_lower_pane: 590
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
 column.width:
-        %m, -1,
+        %m, 104,
         %t, 94,
         %s, 137,
         %d, 139,
@@ -84,7 +84,7 @@ column.width:
         "%Cus:kerberos.realm", 211,
         "%Cus:kerberos.CNameString", 150,
         "%Cus:kerberos.SNameString", 288,
-        %i, 413
+        %i, 954
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".

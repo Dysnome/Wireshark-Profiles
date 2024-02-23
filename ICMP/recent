@@ -63,7 +63,7 @@ gui.bytes_encoding: FROM_PACKET
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 773
+gui.geometry_main_upper_pane: 394
 
 # Main window middle pane size.
 # Decimal number.

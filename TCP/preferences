@@ -216,7 +216,7 @@
 
 # Packet list hidden columns
 # List all columns to hide in the packet list.
-gui.column.hidden: %Cus:rtcp.ssrc.dlsr:0:R
+gui.column.hidden: %Cus:rtcp.ssrc.dlsr:0:R,%Cus:tcp.checksum:0:R,%Cus:tcp.payload:0:R,%Cus:tcp.checksum:0:R
 
 # Packet list column format
 # Each pair of strings consists of a column title and its format
@@ -226,11 +226,17 @@ gui.column.format:
 	"Source", "%s",
 	"Source Port", "%Cus:tcp.srcport:0:R",
 	"Destination", "%d",
+	"Destination Port", "%Cus:tcp.dstport:0:R",
 	"Protocol", "%p",
 	"Length", "%L",
 	"Time to live", "%Cus:ip.ttl:0:R",
 	"Data", "%Cus:data.data:0:R",
 	"Delay since last SR timestamp", "%Cus:rtcp.ssrc.dlsr:0:R",
+	"Checksum", "%Cus:tcp.checksum:0:R",
+	"TCP payload", "%Cus:tcp.payload:0:R",
+	"Checksum", "%Cus:tcp.checksum:0:R",
+	"Sequence number (raw)", "%Cus:tcp.seq_raw:0:R",
+	"Identification", "%Cus:ip.id:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########
@@ -481,7 +487,7 @@ capture.devices_pmode: veth4a35bdb(1),veth3349cf0(1),vethaac44f4(1),ens33(1),br-
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::9491:e5ff:fe75:4ca4 any eq 0, deny tcp any eq 0 host fe80::9491:e5ff:fe75:4ca4, deny tcp host fe80::d85c:7bff:fe90:cbe6 any eq 0, deny tcp any eq 0 host fe80::d85c:7bff:fe90:cbe6, deny tcp host fe80::4816:e7ff:fe38:54a1 any eq 0, deny tcp any eq 0 host fe80::4816:e7ff:fe38:54a1, deny tcp host fe80::42:5cff:fe46:a6aa any eq 0, deny tcp any eq 0 host fe80::42:5cff:fe46:a6aa, deny tcp host fe80::20c:29ff:feef:72ac any eq 0, deny tcp any eq 0 host fe80::20c:29ff:feef:72ac, deny tcp host 172.19.0.1 any eq 0, deny tcp any eq 0 host 172.19.0.1, deny tcp host 172.17.0.1 any eq 0, deny tcp any eq 0 host 172.17.0.1, deny tcp host 192.168.75.129 any eq 0, deny tcp any eq 0 host 192.168.75.129, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::20c:29ff:feef:72ac any eq 0, deny tcp any eq 0 host fe80::20c:29ff:feef:72ac, deny tcp host 172.17.0.1 any eq 0, deny tcp any eq 0 host 172.17.0.1, deny tcp host 192.168.75.129 any eq 0, deny tcp any eq 0 host 192.168.75.129, permit ip any any
 
 # Packets to capture
 # A string
@@ -533,7 +539,7 @@ capture.devices_pmode: veth4a35bdb(1),veth3349cf0(1),vethaac44f4(1),ens33(1),br-
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::9491:e5ff:fe75:4ca4 or host fe80::d85c:7bff:fe90:cbe6 or host fe80::4816:e7ff:fe38:54a1 or host fe80::42:5cff:fe46:a6aa or host fe80::20c:29ff:feef:72ac or host 172.19.0.1 or host 172.17.0.1 or host 192.168.75.129) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::20c:29ff:feef:72ac or host 172.17.0.1 or host 192.168.75.129) and port 22)
 
 # Packets to capture
 # A string

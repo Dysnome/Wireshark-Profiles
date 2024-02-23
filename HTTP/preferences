@@ -224,16 +224,20 @@ gui.column.format:
 	"No.", "%m",
 	"Time", "%Yut",
 	"Source", "%s",
+	"Source Port", "%Cus:tcp.srcport:0:R",
 	"Destination", "%d",
+	"Destination Port", "%Cus:tcp.dstport:0:R",
 	"Protocol", "%p",
 	"Length", "%L",
 	"Data", "%Cus:data.data:0:R",
 	"Host", "%Cus:http.host:0:R",
 	"Request Method", "%Cus:http.request.method:0:R",
+	"Status Code", "%Cus:http.response.code:0:R",
 	"Request URI", "%Cus:http.request.uri:0:R",
 	"Referer", "%Cus:http.referer:0:R",
 	"Server Name", "%Cus:tls.handshake.extensions_server_name:0:R",
-	"Status Code", "%Cus:http.response.code:0:R",
+	"Source Port", "%Cus:tcp.srcport:0:R",
+	"Formatted text", "%Cus:http.chat:0:R",
 	"Info", "%i"
 
 ####### User Interface: Font ########
@@ -484,7 +488,7 @@ capture.devices_pmode: veth7c514a1(1),enp0s3(1),veth576b470(1),br-1a01f93d942f(1
 
 # Remote capture filter
 # A string
-#extcap.ciscodump.remotefilter: deny tcp host fe80::d459:feff:fe2a:4b any eq 0, deny tcp any eq 0 host fe80::d459:feff:fe2a:4b, deny tcp host fe80::9070:41ff:fe0d:94c2 any eq 0, deny tcp any eq 0 host fe80::9070:41ff:fe0d:94c2, deny tcp host fe80::8086:feff:fe30:be25 any eq 0, deny tcp any eq 0 host fe80::8086:feff:fe30:be25, deny tcp host fe80::42:97ff:fea2:47ff any eq 0, deny tcp any eq 0 host fe80::42:97ff:fea2:47ff, deny tcp host fe80::a00:27ff:fed6:a3a4 any eq 0, deny tcp any eq 0 host fe80::a00:27ff:fed6:a3a4, deny tcp host 172.19.0.1 any eq 0, deny tcp any eq 0 host 172.19.0.1, deny tcp host 172.17.0.1 any eq 0, deny tcp any eq 0 host 172.17.0.1, deny tcp host 10.0.5.5 any eq 0, deny tcp any eq 0 host 10.0.5.5, permit ip any any
+#extcap.ciscodump.remotefilter: deny tcp host fe80::20c:29ff:feef:72ac any eq 0, deny tcp any eq 0 host fe80::20c:29ff:feef:72ac, deny tcp host 172.17.0.1 any eq 0, deny tcp any eq 0 host 172.17.0.1, deny tcp host 192.168.75.128 any eq 0, deny tcp any eq 0 host 192.168.75.128, permit ip any any
 
 # Packets to capture
 # A string
@@ -536,7 +540,7 @@ capture.devices_pmode: veth7c514a1(1),enp0s3(1),veth576b470(1),br-1a01f93d942f(1
 
 # Remote capture filter
 # A string
-#extcap.sshdump.remotefilter: not ((host fe80::d459:feff:fe2a:4b or host fe80::9070:41ff:fe0d:94c2 or host fe80::8086:feff:fe30:be25 or host fe80::42:97ff:fea2:47ff or host fe80::a00:27ff:fed6:a3a4 or host 172.19.0.1 or host 172.17.0.1 or host 10.0.5.5) and port 22)
+#extcap.sshdump.remotefilter: not ((host fe80::20c:29ff:feef:72ac or host 172.17.0.1 or host 192.168.75.128) and port 22)
 
 # Packets to capture
 # A string

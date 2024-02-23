@@ -63,11 +63,11 @@ gui.bytes_encoding: FROM_PACKET
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 769
+gui.geometry_main_upper_pane: 496
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 492
+gui.geometry_main_lower_pane: 319
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
@@ -82,7 +82,7 @@ column.width:
         "%Cus:smb2.cmd", 244,
         "%Cus:smb2.share_type", 179,
         "%Cus:smb2.filename", 306,
-        "%Cus:smb2.dialect", 97,
+        "%Cus:smb2.dialect", 308,
         "%Cus:smb2.write_length", 131,
         "%Cus:smb2.channel_info_blob", 164,
         %i, 1048
@@ -103,7 +103,7 @@ gui.endpoint_tabs:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /CTF/events/xTraining_Codebreakers/Incident_Response/IR_5lv/
+gui.fileopen_remembered_dir: ../
 
 # Additional Toolbars shown
 # List of additional toolbars to show.

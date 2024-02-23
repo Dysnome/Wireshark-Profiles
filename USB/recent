@@ -51,7 +51,7 @@ gui.seconds_format: SECONDS
 
 # Zoom level.
 # A decimal number.
-gui.zoom_level: 0
+gui.zoom_level: 4
 
 # Bytes view display type.
 # One of: HEX, BITS
@@ -63,11 +63,11 @@ gui.bytes_encoding: FROM_PACKET
 
 # Main window upper (or leftmost) pane size.
 # Decimal number.
-gui.geometry_main_upper_pane: 207
+gui.geometry_main_upper_pane: 887
 
 # Main window middle pane size.
 # Decimal number.
-gui.geometry_main_lower_pane: 278
+gui.geometry_main_lower_pane: 1235
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
